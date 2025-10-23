@@ -1,33 +1,30 @@
-Ankit Kumar Singh Portfolio
-
+**Ankit Kumar Singh Portfolio**
 
 A modern, responsive, and interactive personal portfolio website built with React, Tailwind CSS, and Framer Motion. This project showcases my skills, projects, education, and contact information with smooth animations, dark/light mode toggle, and interactive UI elements.
 
-🚀 Features
+🚀 **Features**
 
-Fully responsive layout for desktop, tablet, and mobile devices.
+1.Fully responsive layout for desktop, tablet, and mobile devices.
 
-Animated page transitions using Framer Motion.
+2.Animated page transitions using Framer Motion.
 
-Interactive Hero section with animated text and tech stack badges.
+3.Interactive Hero section with animated text and tech stack badges.
 
-Technical skills with progress bars and icons.
+4.Technical skills with progress bars and icons.
 
-Education & Experience section.
+5.Education & Experience section.
 
-Counters for projects, experience, and tasks completed.
+6.Counters for projects, experience, and tasks completed.
 
-Projects, Certifications, Activities pages.
+7.Projects, Certifications, Activities pages.
 
-Navbar with active link highlighting and mobile hamburger menu.
+8.Navbar with active link highlighting and mobile hamburger menu.
 
-Footer with social links and scroll-to-top button.
+9.Footer with social links and scroll-to-top button.
 
-Dark/Light mode toggle for user-friendly experience.
+10.Smooth scroll behavior for better UX.
 
-Smooth scroll behavior for better UX.
-
-Downloadable CV/Resume link.
+11.Downloadable CV/Resume link.
 
 📂 Project Structure
 portfolio/
@@ -48,25 +45,25 @@ portfolio/
 
 💻 Tech Stack
 
-Frontend: React, Tailwind CSS, Framer Motion
+**Frontend**: React, Tailwind CSS, Framer Motion
 
-Icons & Animations: React Icons, Animate.css
+**Icons & Animations**: React Icons, Animate.css
 
-Routing: React Router DOM
+**Routing**: React Router DOM
 
-Utilities: react-scroll, Lucide React
+**Utilities**: react-scroll, Lucide React
 
-Optional: Light/Dark mode toggle using React state
+**Optional**: Light/Dark mode toggle using React state
 
-⚡ Installation & Setup
+⚡ **Installation & Setup**
 
-Clone the repository:
+**Clone the repository:**
 
 git clone https://github.com/Ankit24072002/portfolio.git
 cd portfolio
 
 
-Install dependencies:
+**Install dependencies:**
 
 npm install
 
@@ -76,11 +73,11 @@ Start the development server:
 npm run dev
 
 
-Open your browser and go to:
+**Open your browser and go to:**
 
 http://localhost:5173 and Live link https://self-portfolio-if15.onrender.com 
 
-🎨 Customization
+🎨 **Customization**
 
 Dark/Light mode: Toggle via the Navbar button; updates background, text, and buttons dynamically.
 
@@ -88,7 +85,7 @@ Add new projects/skills: Modify the pages/Projects.jsx or pages/About.jsx compon
 
 Change colors: Update Tailwind gradient classes in components or tailwind.config.js.
 
-📄 Pages
+📄 **Pages**
 
 Home: Hero section with animated introduction, tech stack, and action buttons.
 
@@ -102,7 +99,7 @@ Activities: Personal or professional activities.
 
 Contact: Contact form and email/social links.
 
-📂 Assets
+📂**Assets**
 
 Place images and your resume in the src/assets folder:
 
@@ -118,7 +115,7 @@ npm run build → Build production-ready project
 
 npm run preview → Preview production build
 
-📧 Contact
+📧 **Contact**
 
 Email: kumaranikant24@gmail.com
 
@@ -126,6 +123,6 @@ LinkedIn: Ankit Kumar Singh
 
 GitHub: Ankit24072002
 
-⚖️ License
+⚖️ **License**
 
 This project is open source and available under the MIT License.
