@@ -1,6 +1,7 @@
 import React from "react";
 import { FaLinkedin, FaGithub, FaEnvelope, FaArrowUp } from "react-icons/fa";
 import { animateScroll as scroll } from "react-scroll";
+import { Link } from "react-router-dom"; // ✅ Import Link
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,46 +12,45 @@ export default function Footer() {
         {/* Logo / Name */}
         <div className="text-center md:text-left">
           <h2 className="text-xl font-bold">Ankit Kumar Singh</h2>
-          <p className="text-sm mt-1">Frontend & Full-Stack Developer</p>
+          <p className="text-sm mt-1">Full-Stack MERN Developer</p>
         </div>
 
         {/* Quick Links */}
         <div className="flex justify-center space-x-6">
-          <a
-            href="/"
+          <Link
+            to="/"
             className="hover:text-yellow-300 transition-colors font-medium"
           >
             Home
-          </a>
-          <a
-            href="/projects"
+          </Link>
+          <Link
+            to="/projects"
             className="hover:text-yellow-300 transition-colors font-medium"
           >
             Projects
-          </a>
-          <a
-            href="/certifications"
+          </Link>
+          <Link
+            to="/certifications"
             className="hover:text-yellow-300 transition-colors font-medium"
           >
             Certifications
-          </a>
-          <a
-            href="/activities"
+          </Link>
+          <Link
+            to="/activities"
             className="hover:text-yellow-300 transition-colors font-medium"
           >
             Activities
-          </a>
-          <a
-            href="/contact"
+          </Link>
+          <Link
+            to="/contact"
             className="hover:text-yellow-300 transition-colors font-medium"
           >
             Contact
-          </a>
+          </Link>
         </div>
 
         {/* Social Icons */}
         <div className="flex justify-center md:justify-end gap-4 text-xl">
-          {/* LinkedIn */}
           <a
             href="https://www.linkedin.com/in/ankit-kumar-singh-905109319"
             target="_blank"
@@ -59,8 +59,6 @@ export default function Footer() {
           >
             <FaLinkedin />
           </a>
-
-          {/* GitHub */}
           <a
             href="https://github.com/Ankit24072002"
             target="_blank"
@@ -69,8 +67,6 @@ export default function Footer() {
           >
             <FaGithub />
           </a>
-
-          {/* Email */}
           <a
             href="mailto:kumaranikant24@gmail.com"
             className="hover:text-yellow-300 transition transform hover:scale-110"
