@@ -74,18 +74,42 @@ export default function Home() {
 
           {/* Social Icons */}
           <div className="flex gap-4 mt-6 text-slate-700">
-            {[FaLinkedin, FaGithub, FaEnvelope].map((Icon, i) => (
-              <motion.a
-                key={i}
-                whileHover={{ scale: 1.3, color: "#06b6d4" }}
-                transition={{ type: "spring", stiffness: 300 }}
-                href="#"
-                target="_blank"
-                className="transition"
-              >
-                <Icon size={26} />
-              </motion.a>
-            ))}
+            {/* LinkedIn */}
+            <motion.a
+              whileHover={{ scale: 1.3, color: "#0A66C2" }}
+              transition={{ type: "spring", stiffness: 300 }}
+              href="https://www.linkedin.com/in/ankit-kumar-singh-905109319"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition"
+              title="LinkedIn"
+            >
+              <FaLinkedin size={26} />
+            </motion.a>
+
+            {/* GitHub */}
+            <motion.a
+              whileHover={{ scale: 1.3, color: "#171515" }}
+              transition={{ type: "spring", stiffness: 300 }}
+              href="https://github.com/Ankit24072002"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition"
+              title="GitHub"
+            >
+              <FaGithub size={26} />
+            </motion.a>
+
+            {/* Email */}
+            <motion.a
+              whileHover={{ scale: 1.3, color: "#EA4335" }}
+              transition={{ type: "spring", stiffness: 300 }}
+              href="mailto:kumaranikant24@gmail.com"
+              className="transition"
+              title="Email"
+            >
+              <FaEnvelope size={26} />
+            </motion.a>
           </div>
 
           {/* Info Cards */}
@@ -107,18 +131,16 @@ export default function Home() {
           </div>
         </motion.div>
 
+        {/* Right Column (Image) */}
         <motion.img
-        src={ankitImg}
-        alt="Ankit"
-        initial={{ x: 50, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        whileHover={{ scale: 1.02 }}
-        transition={{ delay: 0.2, type: "spring", stiffness: 120 }}
-        className="w-full h-[36rem] md:h-[40rem] object-cover object-top rounded-xl shadow-2xl ring-4 ring-white ring-offset-4 ring-offset-slate-50"
-/>
-
-
-
+          src={ankitImg}
+          alt="Ankit Kumar Singh"
+          initial={{ x: 50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          whileHover={{ scale: 1.02 }}
+          transition={{ delay: 0.2, type: "spring", stiffness: 120 }}
+          className="w-full h-[36rem] md:h-[40rem] object-cover object-top rounded-xl shadow-2xl ring-4 ring-white ring-offset-4 ring-offset-slate-50"
+        />
       </div>
 
       {/* Scroll Down Arrow */}
