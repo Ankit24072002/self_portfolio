@@ -60,7 +60,7 @@ export default function Home() {
             </Link>
             <a
               className="px-5 py-2 rounded-md border border-cyan-500 text-cyan-500 font-semibold hover:bg-cyan-500 hover:text-white transition transform"
-              href="/resume.pdf"
+              href="/ankit cv 1.pdf"
             >
               Download Resume
             </a>
