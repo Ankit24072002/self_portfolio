@@ -52,7 +52,7 @@ export default function Navbar() {
           <NavLink to="/activities">Activities</NavLink>
           <NavLink to="/contact">Contact</NavLink>
           <a
-            href={resume.pdf} // ✅ From src/assets
+            href={resumePDF} // ✅ From src/assets
             download="Ankit_Kumar_Singh_Resume.pdf"
             className="px-5 py-2 rounded-md bg-cyan-500 text-white font-semibold"
           >

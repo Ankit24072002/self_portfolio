@@ -62,7 +62,7 @@ export default function Home() {
 
             {/* ✅ Download Resume from src/assets */}
             <a
-              href={resume.pdf}
+              href={resumePDF}
               download="Ankit_Kumar_Singh_Resume.pdf"
               className="px-5 py-2 rounded-md bg-cyan-500 text-white font-semibold shadow-lg hover:scale-105 hover:shadow-xl transition transform"
             >
