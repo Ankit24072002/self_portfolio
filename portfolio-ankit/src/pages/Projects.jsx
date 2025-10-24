@@ -34,6 +34,14 @@ const projects = [
     live: "https://apna-gpt-1.onrender.com/",
     code: "https://github.com/Ankit24072002/apna_Gpt.git",
     tag: "AI | Chatbot"
+  },
+  {
+    title: "self Portfolio",
+    desc: "A personal portfolio website showcasing my skills, projects, and experience.",
+    tech: ["React", "Tailwind CSS", "Framer Motion"],
+    live: "https://self-portfolio-if15.onrender.com/projects",
+    code: "https://github.com/Ankit24072002/self_portfolio.git",
+    tag: "Personal | Portfolio"
   }
 ];
 
