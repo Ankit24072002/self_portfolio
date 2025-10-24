@@ -28,7 +28,7 @@ export default function Home() {
             </span>
             <br />
             <span className="text-slate-700 font-semibold animate-pulse">
-              Frontend & Full-Stack Developer
+            Full-Stack MERN Developer
             </span>
           </h1>
 
