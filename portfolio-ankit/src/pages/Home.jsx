@@ -52,30 +52,32 @@ export default function Home() {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-wrap gap-3 mt-4">
-            <Link
-              className="px-5 py-2 rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold shadow-lg hover:scale-105 hover:shadow-xl transition transform"
-              to="/contact"
-            >
-              Hire Me
-            </Link>
+<div className="flex flex-wrap gap-3 mt-4">
+  <Link
+    className="px-5 py-2 rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold shadow-lg hover:scale-105 hover:shadow-xl transition transform"
+    to="/contact"
+  >
+    Hire Me
+  </Link>
 
-            {/* ✅ Download Resume from src/assets */}
-            <a
-              href={resumePDF}
-              download="Ankit_Kumar_Singh_Resume.pdf"
-              className="px-5 py-2 rounded-md bg-cyan-500 text-white font-semibold shadow-lg hover:scale-105 hover:shadow-xl transition transform"
-            >
-              Download Resume
-            </a>
+  {/* ✅ Download Resume */}
+  <a
+    href={resumePDF}
+    download="Ankit_Kumar_Singh_Resume.pdf"
+    className="px-5 py-2 rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold shadow-lg hover:scale-105 hover:shadow-xl transition transform"
+  >
+    Download Resume
+  </a>
 
-            <Link
-              className="px-5 py-2 rounded-md border border-slate-400 text-slate-700 font-semibold hover:bg-slate-100 transition transform"
-              to="/projects"
-            >
-              See Projects
-            </Link>
-          </div>
+  {/* ✅ Same style applied to "See Projects" */}
+  <Link
+    className="px-5 py-2 rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold shadow-lg hover:scale-105 hover:shadow-xl transition transform"
+    to="/projects"
+  >
+    See Projects
+  </Link>
+</div>
+
 
           {/* Social Icons */}
           <div className="flex gap-4 mt-6 text-slate-700">
