@@ -59,11 +59,15 @@ export default function Home() {
               Hire Me
             </Link>
             <a
+               href="/ankit cv 1.pdf"
+              download="Ankit_Kumar_Singh_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-5 py-2 rounded-md border border-cyan-500 text-cyan-500 font-semibold hover:bg-cyan-500 hover:text-white transition transform"
-              href="/ankit cv 1.pdf"
-            >
+>
               Download Resume
             </a>
+
             <Link
               className="px-5 py-2 rounded-md border border-slate-400 text-slate-700 font-semibold hover:bg-slate-100 transition transform"
               to="/projects"

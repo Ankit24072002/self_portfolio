@@ -51,11 +51,15 @@ export default function Navbar() {
           <NavLink to="/activities">Activities</NavLink>
           <NavLink to="/contact">Contact</NavLink>
           <a
-            href="/resume.pdf"
-            className="ml-3 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-teal-400 to-violet-600 text-white font-semibold shadow-lg hover:scale-105 hover:shadow-xl transition transform"
-          >
-            Resume
+             href="/ankit cv 1.pdf"
+             download="Ankit_Kumar_Singh_Resume.pdf"
+             target="_blank"
+             rel="noopener noreferrer"
+            className="px-5 py-2 rounded-md border border-cyan-500 text-cyan-500 font-semibold hover:bg-cyan-500 hover:text-white transition transform"
+>
+            Download Resume
           </a>
+
         </nav>
 
         {/* Mobile toggle */}
