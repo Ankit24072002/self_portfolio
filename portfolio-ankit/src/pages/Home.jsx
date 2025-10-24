@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import ankitImg from "../assets/ankit.jpg";
+import resumePDF from "../assets/resume.pdf"; // ✅ import resume from src/assets
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 export default function Home() {
@@ -28,7 +29,7 @@ export default function Home() {
             </span>
             <br />
             <span className="text-slate-700 font-semibold animate-pulse">
-            Full-Stack MERN Developer
+              Full-Stack MERN Developer
             </span>
           </h1>
 
@@ -58,14 +59,14 @@ export default function Home() {
             >
               Hire Me
             </Link>
+
+            {/* ✅ Download Resume from src/assets */}
             <a
-             href="/resume.pdf"
-             target="_blank"
-             rel="noopener noreferrer"
-             download="Ankit_Kumar_Singh_Resume.pdf"
-            className="px-5 py-2 rounded-md bg-cyan-500 text-white font-semibold"
->
-            Download Resume
+              href={resumePDF}
+              download="Ankit_Kumar_Singh_Resume.pdf"
+              className="px-5 py-2 rounded-md bg-cyan-500 text-white font-semibold shadow-lg hover:scale-105 hover:shadow-xl transition transform"
+            >
+              Download Resume
             </a>
 
             <Link
@@ -78,7 +79,6 @@ export default function Home() {
 
           {/* Social Icons */}
           <div className="flex gap-4 mt-6 text-slate-700">
-            {/* LinkedIn */}
             <motion.a
               whileHover={{ scale: 1.3, color: "#0A66C2" }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -91,7 +91,6 @@ export default function Home() {
               <FaLinkedin size={26} />
             </motion.a>
 
-            {/* GitHub */}
             <motion.a
               whileHover={{ scale: 1.3, color: "#171515" }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -104,7 +103,6 @@ export default function Home() {
               <FaGithub size={26} />
             </motion.a>
 
-            {/* Email */}
             <motion.a
               whileHover={{ scale: 1.3, color: "#EA4335" }}
               transition={{ type: "spring", stiffness: 300 }}

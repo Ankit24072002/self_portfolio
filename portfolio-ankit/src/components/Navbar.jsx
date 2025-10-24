@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ArrowUp } from 'lucide-react';
 import { animateScroll as scroll } from 'react-scroll';
+import resumePDF from '../assets/resume.pdf'; // ✅ Import resume from src/assets
 
 const NavLink = ({ to, children, onClick }) => {
   const loc = useLocation();
@@ -50,15 +51,13 @@ export default function Navbar() {
           <NavLink to="/certifications">Certifications</NavLink>
           <NavLink to="/activities">Activities</NavLink>
           <NavLink to="/contact">Contact</NavLink>
-         <a
-  href="/resume.pdf"
-  download="Ankit_Kumar_Singh_Resume.pdf"
-  className="px-5 py-2 rounded-md bg-cyan-500 text-white font-semibold"
->
-  Download Resume
-</a>
-
-
+          <a
+            href={resumePDF} // ✅ From src/assets
+            download="Ankit_Kumar_Singh_Resume.pdf"
+            className="px-5 py-2 rounded-md bg-cyan-500 text-white font-semibold"
+          >
+            Download Resume
+          </a>
         </nav>
 
         {/* Mobile toggle */}
@@ -84,7 +83,8 @@ export default function Navbar() {
             <NavLink to="/activities" onClick={() => setOpen(false)}>Activities</NavLink>
             <NavLink to="/contact" onClick={() => setOpen(false)}>Contact</NavLink>
             <a
-              href="/resume.pdf"
+              href={resumePDF} // ✅ From src/assets
+              download="Ankit_Kumar_Singh_Resume.pdf"
               className="px-4 py-2 rounded-lg bg-gradient-to-r from-teal-400 to-violet-600 text-white text-center shadow hover:scale-105 hover:shadow-xl transition transform"
             >
               Resume
