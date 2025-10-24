@@ -59,7 +59,7 @@ export default function Home() {
               Hire Me
             </Link>
             <a
-               href="/ankit cv 1.pdf"
+              href="/resume.pdf"
               download="Ankit_Kumar_Singh_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"

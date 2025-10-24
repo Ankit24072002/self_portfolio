@@ -51,7 +51,7 @@ export default function Navbar() {
           <NavLink to="/activities">Activities</NavLink>
           <NavLink to="/contact">Contact</NavLink>
           <a
-             href="/ankit cv 1.pdf"
+             href="/resume.pdf"
              download="Ankit_Kumar_Singh_Resume.pdf"
              target="_blank"
              rel="noopener noreferrer"
