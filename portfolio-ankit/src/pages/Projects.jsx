@@ -36,6 +36,22 @@ const projects = [
     tag: "AI | Chatbot"
   },
   {
+    title: "Event Management System",
+    desc: "A full-stack platform for managing and organizing events with real-time updates and user engagement.",
+    tech: ["React", "Node.js","Express", "MongoDB", "JWT", "Tailwind","Socket.io"],
+    live: "https://event-management-system-frontend.onrender.com/",
+    code: "https://github.com/Ankit24072002/event-management-system.git",
+    tag: "Event | MERN"
+  },
+  {
+    title: "self Portfolio",
+    desc: "A personal portfolio website showcasing my skills, projects, and experience.",
+    tech: ["React", "Tailwind CSS", "Framer Motion"],
+    live: "https://self-portfolio-if15.onrender.com/projects",
+    code: "https://github.com/Ankit24072002/self_portfolio.git",
+    tag: "Personal | Portfolio"
+  },
+  {
     title: "self Portfolio",
     desc: "A personal portfolio website showcasing my skills, projects, and experience.",
     tech: ["React", "Tailwind CSS", "Framer Motion"],
