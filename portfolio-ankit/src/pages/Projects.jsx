@@ -50,14 +50,6 @@ const projects = [
     live: "https://self-portfolio-if15.onrender.com/projects",
     code: "https://github.com/Ankit24072002/self_portfolio.git",
     tag: "Personal | Portfolio"
-  },
-  {
-    title: "self Portfolio",
-    desc: "A personal portfolio website showcasing my skills, projects, and experience.",
-    tech: ["React", "Tailwind CSS", "Framer Motion"],
-    live: "https://self-portfolio-if15.onrender.com/projects",
-    code: "https://github.com/Ankit24072002/self_portfolio.git",
-    tag: "Personal | Portfolio"
   }
 ];
 
