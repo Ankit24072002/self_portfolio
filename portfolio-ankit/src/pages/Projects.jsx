@@ -39,7 +39,7 @@ const projects = [
     title: "Event Management System",
     desc: "A full-stack platform for managing and organizing events with real-time updates and user engagement.",
     tech: ["React", "Node.js","Express", "MongoDB", "JWT", "Tailwind","Socket.io"],
-    live: "https://event-management-system-frontend.onrender.com/",
+    live: "https://event-managementdashboard-2.onrender.com",
     code: "https://github.com/Ankit24072002/event-management-system.git",
     tag: "Event | MERN"
   },
