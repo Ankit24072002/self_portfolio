@@ -48,7 +48,7 @@ const projects = [
     desc: "A full-stack platform for tracking and analyzing stock market data with real-time updates.",
     tech: ["React", "Node.js","Express", "MongoDB", "JWT", "Tailwind","Socket.io"],
     live: "https://stock-market-dashboard.onrender.com",
-    code: "https://github.com/Ankit24072002/stock-market-dashboard.git",
+    code: "https://github.com/Ankit24072002/stock_portfolio",
     tag: "Finance | MERN"
   },
 
