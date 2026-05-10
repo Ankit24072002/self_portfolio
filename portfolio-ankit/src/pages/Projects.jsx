@@ -40,7 +40,7 @@ const projects = [
     desc: "A full-stack platform for managing and organizing events with real-time updates and user engagement.",
     tech: ["React", "Node.js","Express", "MongoDB", "JWT", "Tailwind","Socket.io"],
     live: "https://event-managementdashboard-2.onrender.com",
-    code: "https://github.com/Ankit24072002/event-management-system.git",
+    code: "https://github.com/Ankit24072002/Event_managementDashboard.git",
     tag: "Event | MERN"
   },
   {
@@ -48,7 +48,7 @@ const projects = [
     desc: "A full-stack platform for tracking and analyzing stock market data with real-time updates.",
     tech: ["React", "Node.js","Express", "MongoDB", "JWT", "Tailwind","Socket.io"],
     live: "https://stock-market-dashboard.onrender.com",
-    code: "https://github.com/Ankit24072002/stock_portfolio",
+    code: "https://github.com/Ankit24072002/stock_portfolio.git",
     tag: "Finance | MERN"
   },
 
