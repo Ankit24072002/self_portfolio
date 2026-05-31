@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ArrowUp } from 'lucide-react';
 import { animateScroll as scroll } from 'react-scroll';
-import resumePDF from '../assets/resume.pdf'; // ✅ Import resume from src/assets
+import resumePDF from '../assets/Ankit Kumar Singh_Resume.pdf';
 
 const NavLink = ({ to, children, onClick }) => {
   const loc = useLocation();

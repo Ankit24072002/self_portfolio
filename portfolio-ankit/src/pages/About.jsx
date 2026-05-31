@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import resumePDF from "../assets/Ankit Kumar Singh_Resume.pdf";
 import {
   FaReact,
   FaNodeJs,
@@ -103,7 +104,8 @@ export default function About() {
             technologies to enhance my skill set.
           </p>
           <a
-            href="/CV_Ankit.pdf"
+            href={resumePDF}
+            download="Ankit_Kumar_Singh_Resume.pdf"
             className="mt-6 inline-block px-6 py-2 bg-cyan-500 text-white font-semibold rounded shadow hover:bg-cyan-600 transition"
           >
             Download CV

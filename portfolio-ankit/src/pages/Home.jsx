@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import ankitImg from "../assets/ankit.jpg";
-import resumePDF from "../assets/resume.pdf"; // ✅ import resume from src/assets
+import resumePDF from "../assets/Ankit Kumar Singh_Resume.pdf";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 export default function Home() {
