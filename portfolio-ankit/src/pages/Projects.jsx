@@ -15,7 +15,7 @@ const projects = [
     title: "Ocean Hazard Platform",
     desc: "A GIS-based system for tracking oceanic hazards using PostgreSQL, Leaflet.js, and Docker.",
     tech: ["React", "Postgres", "Leaflet.js", "Docker"],
-    live: "https://ocean-hazard-platform.vercel.app/",
+    live: "https://ocean-hazard-platform-14.onrender.com",
     code: "https://github.com/Ankit24072002/ocean-hazard-platform.git",
     tag: "Environment | GIS"
   },
