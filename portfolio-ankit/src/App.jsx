@@ -18,14 +18,13 @@ function ScrollToTop() {
   return null;
 }
 
-// Motion wrapper for page transitions
 const PageWrapper = ({ children }) => (
   <motion.div
     initial={{ opacity: 0, y: 40 }}
     animate={{ opacity: 1, y: 0 }}
     exit={{ opacity: 0, y: -40 }}
-    transition={{ duration: 0.6 }}
-    className="p-6 md:p-12 rounded-xl shadow-xl bg-white/80 backdrop-blur-md"
+    transition={{ duration: 0.55 }}
+    className="max-w-7xl mx-auto p-6 md:p-10 rounded-[32px] shadow-2xl border border-white/20 bg-white/80 backdrop-blur-xl"
   >
     {children}
   </motion.div>
@@ -35,11 +34,14 @@ export default function App() {
   const location = useLocation();
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-cyan-50 via-white to-violet-50 transition-colors duration-1000">
+    <div className="min-h-screen flex flex-col relative bg-slate-950 text-slate-100 overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.18),transparent_24%),radial-gradient(circle_at_bottom_right,_rgba(168,85,247,0.2),transparent_24%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(15,23,42,0.95),rgba(15,23,42,0.75))]" />
+
       <Navbar />
       <ScrollToTop />
 
-      <main className="flex-1 relative">
+      <main className="flex-1 relative z-10 px-4 py-6 md:px-8 md:py-10">
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />

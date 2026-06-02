@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaExternalLinkAlt, FaGithub, FaArrowRight } from "react-icons/fa";
 
@@ -51,7 +51,6 @@ const projects = [
     code: "https://github.com/Ankit24072002/stock_portfolio.git",
     tag: "Finance | MERN"
   },
-
   {
     title: "self Portfolio",
     desc: "A personal portfolio website showcasing my skills, projects, and experience.",
@@ -62,35 +61,92 @@ const projects = [
   }
 ];
 
-export default function Projects() {
-  return (
-    <section className="section bg-gradient-to-br from-slate-50 to-cyan-50 py-16">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl font-extrabold text-slate-800 mb-3">🚀 Projects</h2>
-        <p className="text-slate-600 mb-10 text-lg">
-          A collection of my most impactful works — blending innovation, performance, and clean design.
-        </p>
+const categories = ["All", "MERN", "AI", "Finance", "Environment", "Communication", "Personal"];
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((p, i) => (
+export default function Projects() {
+  const [activeCategory, setActiveCategory] = useState("All");
+  const filteredProjects =
+    activeCategory === "All"
+      ? projects
+      : projects.filter((project) => project.tag.includes(activeCategory));
+
+  const overview = [
+    { label: "Projects", value: projects.length },
+    { label: "Live Apps", value: 7 },
+    { label: "Tech Used", value: 18 },
+  ];
+
+  return (
+    <section className="section bg-slate-950/80 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between mb-10">
+          <div>
+            <h2 className="text-4xl font-extrabold text-white">🚀 Projects</h2>
+            <p className="mt-3 max-w-2xl text-slate-300 text-lg">
+              A collection of my most impactful works — blending innovation, performance, and clean design.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={`rounded-full px-4 py-2 text-sm font-medium transition ${
+                  activeCategory === category
+                    ? 'bg-cyan-500 text-slate-950 shadow-lg shadow-cyan-500/20'
+                    : 'bg-white/10 text-slate-300 hover:bg-white/15'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-3 mb-10">
+          {overview.map((item) => (
+            <div key={item.label} className="hero-card border-white/10">
+              <p className="text-sm uppercase tracking-[0.2em] text-cyan-300">{item.label}</p>
+              <p className="mt-3 text-3xl font-bold text-white">{item.value}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="grid gap-8 lg:grid-cols-3">
+          {filteredProjects.map((p, i) => (
             <motion.div
               key={p.title}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="relative group bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100 hover:shadow-2xl hover:-translate-y-2 transition transform"
+              transition={{ delay: i * 0.08, duration: 0.45 }}
+              className="project-card group"
             >
-              {/* Hover overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-cyan-600 via-cyan-500/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-end p-6 text-white">
-                <div className="font-bold text-xl">{p.title}</div>
-                <p className="text-sm mt-2">{p.desc}</p>
-                <div className="flex gap-3 mt-4">
+              <div className="relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-transparent to-violet-500/10 opacity-0 group-hover:opacity-100 transition" />
+                <div className="p-6">
+                  <div className="inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.18em] text-cyan-300">
+                    {p.tag}
+                  </div>
+                  <h3 className="mt-5 text-2xl font-semibold text-white">{p.title}</h3>
+                  <p className="mt-4 text-slate-300 leading-7 line-clamp-3">{p.desc}</p>
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {p.tech.map((t) => (
+                      <span key={t} className="rounded-full bg-white/10 px-3 py-1 text-xs text-slate-200">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-t border-white/10 bg-slate-950/90 p-6">
+                <div className="flex flex-wrap items-center gap-3">
                   <a
                     href={p.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-white text-cyan-600 rounded-md text-sm font-semibold flex items-center gap-2 hover:bg-cyan-100 transition"
+                    className="inline-flex items-center gap-2 rounded-full bg-cyan-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400"
                   >
                     <FaExternalLinkAlt /> Live
                   </a>
@@ -98,30 +154,13 @@ export default function Projects() {
                     href={p.code}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-slate-900 text-white rounded-md text-sm font-semibold flex items-center gap-2 hover:bg-slate-700 transition"
+                    className="inline-flex items-center gap-2 rounded-full bg-slate-800 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:bg-slate-700"
                   >
                     <FaGithub /> Code
                   </a>
                 </div>
-              </div>
-
-              {/* Card content */}
-              <div className="p-6">
-                <div className="text-xs uppercase font-bold text-cyan-600 tracking-wide mb-2">{p.tag}</div>
-                <h3 className="text-xl font-semibold text-slate-800">{p.title}</h3>
-                <p className="text-slate-600 mt-2 line-clamp-3">{p.desc}</p>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {p.tech.map((t) => (
-                    <span
-                      key={t}
-                      className="text-xs bg-cyan-100 text-cyan-800 px-2 py-1 rounded-full font-medium"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
-                <div className="mt-4 flex items-center text-cyan-600 text-sm font-semibold group-hover:text-cyan-700 transition">
-                  View Details <FaArrowRight className="ml-2" />
+                <div className="mt-4 flex items-center gap-2 text-cyan-300 text-sm font-semibold">
+                  View Details <FaArrowRight />
                 </div>
               </div>
             </motion.div>
