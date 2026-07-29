@@ -8,9 +8,9 @@ import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 export default function Home() {
   const skills = ["React", "Node.js", "Tailwind CSS", "JavaScript", "Express", "MongoDB"];
   const stats = [
-    { label: "Live Projects", value: 7 },
+    { label: "Live Projects", value: 8 },
     { label: "Experience", value: "13+ months" },
-    { label: "Technologies", value: "18+" },
+    { label: "Technologies", value: "20+" },
   ];
 
   return (
