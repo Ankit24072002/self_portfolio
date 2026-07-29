@@ -1,16 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaExternalLinkAlt, FaGithub, FaArrowRight, FaRocket, FaBrain, FaChartLine, FaCheckCircle } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub, FaArrowRight } from "react-icons/fa";
 
 const projects = [
-  {
-    title: "JobPilot.AI",
-    desc: "A full-stack career intelligence platform that helps users discover jobs, optimize resumes, and receive AI-guided career insights using Gemini-powered recommendations.",
-    tech: ["React 19", "Vite", "Tailwind CSS", "Node.js", "Express", "MongoDB", "JWT", "Gemini API", "Multer", "PDF/DOCX"],
-    live: "https://jobpilot-livid-omega.vercel.app/",
-    code: "https://github.com/JOB-PILOT-AI/JobPilot-AI",
-    tag: "AI | Career Platform"
-  },
   {
     title: "Mutual Fund Tracker",
     desc: "A full-stack platform to search, compare, and save mutual funds with real-time data from mfapi.in.",
@@ -69,7 +61,7 @@ const projects = [
   }
 ];
 
-const categories = ["All", "MERN", "AI", "Finance", "Environment", "Communication", "Personal", "Career"];
+const categories = ["All", "MERN", "AI", "Finance", "Environment", "Communication", "Personal"];
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -80,8 +72,8 @@ export default function Projects() {
 
   const overview = [
     { label: "Projects", value: projects.length },
-    { label: "Live Apps", value: 8 },
-    { label: "Tech Stack", value: 20 },
+    { label: "Live Apps", value: 7 },
+    { label: "Tech Stack", value: 18 },
   ];
 
   return (
@@ -91,7 +83,7 @@ export default function Projects() {
           <div>
             <h2 className="text-4xl font-extrabold text-white">🚀 Projects</h2>
             <p className="mt-3 max-w-2xl text-slate-300 text-lg">
-              A collection of my most impactful builds — combining real-world problem solving, modern UI, and scalable full-stack engineering.
+              A collection of my most impactful works — blending innovation, performance, and clean design.
             </p>
           </div>
           <div className="flex flex-wrap gap-2">
@@ -110,64 +102,6 @@ export default function Projects() {
             ))}
           </div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 28 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="mb-10 rounded-[32px] border border-cyan-400/20 bg-gradient-to-br from-cyan-500/15 via-slate-900 to-violet-500/10 p-8 shadow-2xl shadow-cyan-500/10 md:p-10"
-        >
-          <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-            <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-medium text-cyan-300">
-                <FaRocket /> Featured Final-Year Project
-              </div>
-              <h3 className="mt-5 text-3xl font-semibold text-white">JobPilot.AI</h3>
-              <p className="mt-4 text-lg leading-8 text-slate-300">
-                A comprehensive MERN full-stack career intelligence platform for intelligent job matching, resume optimization, and career guidance, powered by Google Gemini.
-              </p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <a
-                  href="https://jobpilot-livid-omega.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-cyan-500 px-5 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400"
-                >
-                  <FaExternalLinkAlt /> Live Demo
-                </a>
-                <a
-                  href="https://github.com/JOB-PILOT-AI/JobPilot-AI"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-5 py-2.5 text-sm font-semibold text-slate-100 transition hover:bg-white/15"
-                >
-                  <FaGithub /> GitHub Repo
-                </a>
-              </div>
-            </div>
-
-            <div className="w-full rounded-[24px] border border-white/10 bg-slate-950/70 p-6 lg:max-w-sm">
-              <div className="flex items-center gap-2 text-cyan-300">
-                <FaBrain /> <span className="text-sm font-semibold uppercase tracking-[0.24em]">What it delivers</span>
-              </div>
-              <div className="mt-4 space-y-3 text-sm text-slate-300">
-                <div className="flex items-start gap-2">
-                  <FaCheckCircle className="mt-1 text-cyan-400" />
-                  <span>AI-assisted job matching with intelligent recommendations.</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <FaCheckCircle className="mt-1 text-cyan-400" />
-                  <span>Resume and document optimization with parsing support.</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <FaCheckCircle className="mt-1 text-cyan-400" />
-                  <span>Career dashboard experience built for real-world product feel.</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
 
         <div className="grid gap-4 sm:grid-cols-3 mb-10">
           {overview.map((item) => (
