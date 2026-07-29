@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaExternalLinkAlt, FaGithub, FaArrowRight } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub, FaArrowRight, FaLaptopCode, FaDatabase, FaStar } from "react-icons/fa";
 
 const projects = [
   {
     title: "Mutual Fund Tracker",
-    desc: "A full-stack platform to search, compare, and save mutual funds with real-time data from mfapi.in.",
+    desc: "A polished finance dashboard that helps users search, compare, and track mutual funds with secure profiles and analytics.",
+    features: ["Real-time fund search", "Personal watchlist", "JWT secured auth"],
     tech: ["React", "Node.js", "MongoDB", "JWT", "Tailwind"],
     live: "https://mutual-fund-tracker-2-iqzm.onrender.com/",
     code: "https://github.com/Ankit24072002/mutual-fund-tracker.git",
@@ -13,7 +14,8 @@ const projects = [
   },
   {
     title: "Ocean Hazard Platform",
-    desc: "A GIS-based system for tracking oceanic hazards using PostgreSQL, Leaflet.js, and Docker.",
+    desc: "A GIS-focused platform for visualizing oceanic hazards with live data, mapping, and deployment-ready monitoring.",
+    features: ["Interactive Leaflet map", "Hazard tracking", "Docker deployment"],
     tech: ["React", "Postgres", "Leaflet.js", "Docker"],
     live: "https://ocean-hazard-monitor.onrender.com",
     code: "https://github.com/Ankit24072002/ocean-hazard-platform.git",
@@ -21,7 +23,8 @@ const projects = [
   },
   {
     title: "Apna Video Call",
-    desc: "Real-time video conferencing platform with chat, screen sharing, and multiple user support.",
+    desc: "A real-time video conferencing app with chat, screen sharing, and multi-user sessions built for reliability.",
+    features: ["WebRTC video calls", "Live chat", "Responsive meeting UI"],
     tech: ["React", "WebRTC", "Socket.io", "Node.js"],
     live: "https://vdo-calling-5frontend.onrender.com/",
     code: "https://github.com/Ankit24072002/vdo_calling.git",
@@ -29,7 +32,8 @@ const projects = [
   },
   {
     title: "Apna GPT",
-    desc: "A ChatGPT-like MERN app integrated with OpenAI API for smart, context-aware conversations.",
+    desc: "A conversational AI app built on MERN with OpenAI integration for smart responses and intelligent workflows.",
+    features: ["AI-assisted chat", "Context-aware replies", "Secure user sessions"],
     tech: ["MERN", "OpenAI", "JWT"],
     live: "https://apna-gpt-1.onrender.com/",
     code: "https://github.com/Ankit24072002/apna_Gpt.git",
@@ -37,7 +41,8 @@ const projects = [
   },
   {
     title: "Event Management System",
-    desc: "A full-stack platform for managing and organizing events with real-time updates and user engagement.",
+    desc: "A complete event platform for organizers to manage attendees, schedules, and interactive dashboards.",
+    features: ["Event scheduling", "Attendee management", "Realtime updates"],
     tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind", "Socket.io"],
     live: "https://event-managementdashboard-2.onrender.com",
     code: "https://github.com/Ankit24072002/Event_managementDashboard.git",
@@ -45,7 +50,8 @@ const projects = [
   },
   {
     title: "Stock Market Dashboard",
-    desc: "A full-stack platform for tracking and analyzing stock market data with real-time updates.",
+    desc: "A full-stack market analytics dashboard for tracking stock performance and portfolio insights in real time.",
+    features: ["Portfolio tracking", "Market analytics", "Live updates"],
     tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind", "Socket.io"],
     live: "https://stock-portfolio-1-ravm.onrender.com",
     code: "https://github.com/Ankit24072002/stock_portfolio.git",
@@ -53,7 +59,8 @@ const projects = [
   },
   {
     title: "self Portfolio",
-    desc: "A personal portfolio website showcasing my skills, projects, and experience.",
+    desc: "A personal portfolio website that showcases my projects, skills, and professional web design approach.",
+    features: ["Modern design", "Smooth navigation", "Responsive layout"],
     tech: ["React", "Tailwind CSS", "Framer Motion"],
     live: "https://self-portfolio-if15.onrender.com/projects",
     code: "https://github.com/Ankit24072002/self_portfolio.git",
@@ -71,20 +78,64 @@ export default function Projects() {
       : projects.filter((project) => project.tag.includes(activeCategory));
 
   const overview = [
-    { label: "Projects", value: projects.length },
-    { label: "Live Apps", value: 7 },
-    { label: "Tech Stack", value: 18 },
+    { label: "Projects", value: projects.length, icon: FaLaptopCode, detail: "Polished apps" },
+    { label: "Live Apps", value: 7, icon: FaStar, detail: "Deployment ready" },
+    { label: "Tech Stack", value: 18, icon: FaDatabase, detail: "Modern tools" }
   ];
 
   return (
-    <section className="section bg-slate-950/80 py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between mb-10">
+    <section className="relative section overflow-hidden bg-slate-950/90 py-20">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-80 bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.16),transparent_30%),radial-gradient(circle_at_top_right,_rgba(168,85,247,0.12),transparent_25%)]" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-72 bg-[radial-gradient(circle_at_bottom_left,_rgba(16,185,129,0.14),transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(168,85,247,0.12),transparent_25%)]" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-12 rounded-[36px] border border-white/10 bg-slate-900/85 p-8 shadow-2xl shadow-black/30 backdrop-blur-xl"
+        >
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.12),transparent_25%),radial-gradient(circle_at_bottom_right,_rgba(168,85,247,0.1),transparent_22%)] pointer-events-none" />
+          <div className="relative grid gap-8 lg:grid-cols-[1.4fr_1fr] items-center">
+            <div className="space-y-6">
+              <p className="inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-2 text-xs uppercase tracking-[0.28em] text-cyan-300">
+                Projects showcase
+              </p>
+              <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                Professional web products with polished UX and modern architecture.
+              </h1>
+              <p className="max-w-2xl text-lg leading-8 text-slate-300">
+                Explore a curated selection of production-ready applications built with performance, clarity, and real user value in mind.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-100">MERN</span>
+                <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-100">Tailwind</span>
+                <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-100">Realtime</span>
+                <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-100">AI</span>
+              </div>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {overview.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div key={item.label} className="rounded-[28px] border border-white/10 bg-slate-950/90 p-5 shadow-xl shadow-black/20">
+                    <div className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-cyan-500/10 text-cyan-300">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <p className="mt-4 text-sm uppercase tracking-[0.24em] text-slate-400">{item.label}</p>
+                    <p className="mt-3 text-3xl font-semibold text-white">{item.value}</p>
+                    <p className="mt-2 text-sm text-slate-400">{item.detail}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </motion.div>
+
+        <div className="flex flex-wrap items-center justify-between gap-4 mb-10">
           <div>
-            <h2 className="text-4xl font-extrabold text-white">🚀 Projects</h2>
-            <p className="mt-3 max-w-2xl text-slate-300 text-lg">
-              A collection of my most impactful works — blending innovation, performance, and clean design.
-            </p>
+            <p className="text-sm uppercase tracking-[0.24em] text-cyan-300">Featured work</p>
+            <h2 className="mt-3 text-3xl font-semibold text-white">Selected apps with refined UI and production-ready UX.</h2>
           </div>
           <div className="flex flex-wrap gap-2">
             {categories.map((category) => (
@@ -103,44 +154,41 @@ export default function Projects() {
           </div>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-3 mb-10">
-          {overview.map((item) => (
-            <div key={item.label} className="hero-card border-white/10">
-              <p className="text-sm uppercase tracking-[0.2em] text-cyan-300">{item.label}</p>
-              <p className="mt-3 text-3xl font-bold text-white">{item.value}</p>
-            </div>
-          ))}
-        </div>
-
         <div className="grid gap-8 lg:grid-cols-3">
           {filteredProjects.map((p, i) => (
-            <motion.div
+            <motion.article
               key={p.title}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.45 }}
-              className="project-card group"
+              className="project-card group overflow-hidden transition-transform duration-500 hover:-translate-y-2 hover:shadow-2xl"
             >
-              <div className="relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-transparent to-violet-500/10 opacity-0 group-hover:opacity-100 transition" />
-                <div className="p-6">
-                  <div className="inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.18em] text-cyan-300">
-                    {p.tag}
-                  </div>
-                  <h3 className="mt-5 text-2xl font-semibold text-white">{p.title}</h3>
-                  <p className="mt-4 text-slate-300 leading-7 line-clamp-3">{p.desc}</p>
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {p.tech.map((t) => (
-                      <span key={t} className="rounded-full bg-white/10 px-3 py-1 text-xs text-slate-200">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-cyan-400 via-violet-500 to-fuchsia-500" />
+              <div className="p-7 pt-10">
+                <div className="inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.18em] text-cyan-300">
+                  {p.tag}
+                </div>
+                <h3 className="mt-5 text-2xl font-semibold text-white">{p.title}</h3>
+                <p className="mt-4 text-slate-300 leading-7 line-clamp-4">{p.desc}</p>
+                <ul className="mt-5 space-y-3">
+                  {p.features.map((feature) => (
+                    <li key={feature} className="flex items-center gap-3 text-sm text-slate-300">
+                      <span className="h-2.5 w-2.5 rounded-full bg-cyan-400" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {p.tech.map((t) => (
+                    <span key={t} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-200">
+                      {t}
+                    </span>
+                  ))}
                 </div>
               </div>
 
-              <div className="border-t border-white/10 bg-slate-950/90 p-6">
+              <div className="border-t border-white/10 bg-slate-950/95 p-6">
                 <div className="flex flex-wrap items-center gap-3">
                   <a
                     href={p.live}
@@ -163,7 +211,7 @@ export default function Projects() {
                   View Details <FaArrowRight />
                 </div>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>
