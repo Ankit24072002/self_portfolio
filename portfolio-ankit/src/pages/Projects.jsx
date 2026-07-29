@@ -4,16 +4,16 @@ import { FaExternalLinkAlt, FaGithub, FaArrowRight, FaLaptopCode, FaDatabase, Fa
 
 const projects = [
   {
-    title: "Mutual Fund Tracker",
-    desc: "A polished finance dashboard that helps users search, compare, and track mutual funds with secure profiles and analytics.",
-    features: ["Real-time fund search", "Personal watchlist", "JWT secured auth"],
-    tech: ["React", "Node.js", "MongoDB", "JWT", "Tailwind"],
-    live: "https://mutual-fund-tracker-2-iqzm.onrender.com/",
-    code: "https://github.com/Ankit24072002/mutual-fund-tracker.git",
-    tag: "Finance | MERN"
+    title: "JobPilot.AI",
+    desc: "A career intelligence platform that matches jobs, optimizes resumes, and delivers AI-powered career insights.",
+    features: ["Smart job matching", "Resume optimization", "Document parsing + analytics"],
+    tech: ["React", "Vite", "Tailwind CSS", "Node.js", "Express", "MongoDB", "JWT", "Multer"],
+    live: "https://jobpilot-livid-omega.vercel.app/",
+    code: "https://github.com/JOB-PILOT-AI/JobPilot-AI",
+    tag: "AI | Career Platform"
   },
   {
-    title: "Ocean Hazard Platform",
+    title: "Mutual Fund Tracker",
     desc: "A GIS-focused platform for visualizing oceanic hazards with live data, mapping, and deployment-ready monitoring.",
     features: ["Interactive Leaflet map", "Hazard tracking", "Docker deployment"],
     tech: ["React", "Postgres", "Leaflet.js", "Docker"],
@@ -79,8 +79,8 @@ export default function Projects() {
 
   const overview = [
     { label: "Projects", value: projects.length, icon: FaLaptopCode, detail: "Polished apps" },
-    { label: "Live Apps", value: 7, icon: FaStar, detail: "Deployment ready" },
-    { label: "Tech Stack", value: 18, icon: FaDatabase, detail: "Modern tools" }
+    { label: "Live Apps", value: 8, icon: FaStar, detail: "Deployment ready" },
+    { label: "Tech Stack", value: 20, icon: FaDatabase, detail: "Modern tools" }
   ];
 
   return (
