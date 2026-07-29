@@ -14,6 +14,15 @@ const projects = [
   },
   {
     title: "Mutual Fund Tracker",
+    desc: "A polished finance dashboard that helps users search, compare, and track mutual funds with secure profiles and analytics.",
+    features: ["Real-time fund search", "Personal watchlist", "JWT secured auth"],
+    tech: ["React", "Node.js", "MongoDB", "JWT", "Tailwind"],
+    live: "https://mutual-fund-tracker-2-iqzm.onrender.com/",
+    code: "https://github.com/Ankit24072002/mutual-fund-tracker.git",
+    tag: "Finance | MERN"
+  },
+  {
+    title: "Ocean Hazard Platform",
     desc: "A GIS-focused platform for visualizing oceanic hazards with live data, mapping, and deployment-ready monitoring.",
     features: ["Interactive Leaflet map", "Hazard tracking", "Docker deployment"],
     tech: ["React", "Postgres", "Leaflet.js", "Docker"],
